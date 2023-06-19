@@ -1,12 +1,11 @@
 .container {
-    width: 1200px;
+    width: 100%;
     margin-inline: auto;
 }
 .row {
     display: flex;
     flex-wrap: wrap;
 }
-
 .col-1 {
     flex: 0 0 calc(100% / 12*1);
 }
@@ -43,6 +42,98 @@
 .col-12 {
     flex: 0 0 calc(100% / 12*12);
 }
+
+@media (min-width:600px) {
+    .container {
+        width: 600px;
+        margin-inline: auto;
+    }
+    .col-sl-1 {
+        flex: 0 0 calc(100% / 12*1);
+    }
+    .col-sl-2 {
+        flex: 0 0 calc(100% / 12*2);
+    }
+    .col-sl-3 {
+        flex: 0 0 calc(100% / 12*3);
+    }
+    .col-sl-4 {
+        flex: 0 0 calc(100% / 12*4);
+    }
+    .col-sl-5 {
+        flex: 0 0 calc(100% / 12*5);
+    }
+    .col-sl-6 {
+        flex: 0 0 calc(100% / 12*6);
+    }
+    .col-sl-7 {
+        flex: 0 0 calc(100% / 12*7);
+    }
+    .col-sl-8 {
+        flex: 0 0 calc(100% / 12*8);
+    }
+    .col-sl-9 {
+        flex: 0 0 calc(100% / 12*9);
+    }
+    .col-sl-10 {
+        flex: 0 0 calc(100% / 12*10);
+    }
+    .col-sl-11 {
+        flex: 0 0 calc(100% / 12*11);
+    }
+    .col-sl-12 {
+        flex: 0 0 calc(100% / 12*12);
+    }
+}
+
+@media (min-width:1200px) {
+    .container {
+        width: 1200px;
+        margin-inline: auto;
+    }
+    .col-lg-1 {
+        flex: 0 0 calc(100% / 12*1);
+    }
+    .col-lg-2 {
+        flex: 0 0 calc(100% / 12*2);
+    }
+    .col-lg-3 {
+        flex: 0 0 calc(100% / 12*3);
+    }
+    .col-lg-4 {
+        flex: 0 0 calc(100% / 12*4);
+    }
+    .col-lg-5 {
+        flex: 0 0 calc(100% / 12*5);
+    }
+    .col-lg-6 {
+        flex: 0 0 calc(100% / 12*6);
+    }
+    .col-lg-7 {
+        flex: 0 0 calc(100% / 12*7);
+    }
+    .col-lg-8 {
+        flex: 0 0 calc(100% / 12*8);
+    }
+    .col-lg-9 {
+        flex: 0 0 calc(100% / 12*9);
+    }
+    .col-lg-10 {
+        flex: 0 0 calc(100% / 12*10);
+    }
+    .col-lg-11 {
+        flex: 0 0 calc(100% / 12*11);
+    }
+    .col-lg-12 {
+        flex: 0 0 calc(100% / 12*12);
+    }
+}
+
+
 [class^='col']{
     padding: 15px;
+}
+
+.no-gutters > [class^='col'] {
+    padding: 0;
 }
