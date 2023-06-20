@@ -57,25 +57,26 @@ nav a {
     position: relative;
 }
 .back1 {
-    background-image: url('./images/home.jpg');
+    padding-top: 100px;
+    background-image: url('./images/home1-2.jpg');
 }
 #members {
     /* padding-top: 47px; */
-    width: 300px;
+    width: 225px;
     padding-block: 20px;
     border-radius: 10px;
-    background-color: #fff;
+    background-color: #ffffffb4;
     text-align: center;
 
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
-    transform: translate(-55%,-70%);
+    transform: translate(-50%,-50%);
     transition: .3s;
 }
 #members a {
     text-decoration: none;
-    color: black;
+    color: #000000;
 }
 #members h2 {
     font-size: 1rem;
@@ -235,11 +236,13 @@ nav a {
         position: relative;
     }
     .back1 {
+        padding-top: 0px;
         background-image: url('./images/home.jpg');
     }
     #members {
-        width: 500px;
+        width: 600px;
         padding: 30px;
+        padding-block: 50px;
         border-radius: 10px;
         background-color: #fff;
         text-align: center;
