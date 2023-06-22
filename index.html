@@ -7,6 +7,7 @@
     <link rel="icon" href="./images/users-solid.svg">
     <link rel="stylesheet" href="./global.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./stylejs.css">
     <link rel="stylesheet" href="./grid.css">
 </head>
 <body>
@@ -58,7 +59,7 @@
         </div>
     </section>
 
-    <section id="3">
+    <section id="our" class="member-open active">
         <div id="about">
             <div class="container row">
                 <div class="col-12">
@@ -82,7 +83,7 @@
                     <div class="icon"><div class="people3"></div></div>
                     <h3>莊鈞凱</h3>
                     <p>這個人很懶什麼留言都沒留下</p>
-                    <a href="#" class="btn btn-light">More</a>
+                    <a href="#" class="btn btn-light zk" data-target1="#our">More</a>
                 </div>
             </div>
         </div>
@@ -92,6 +93,17 @@
         <div class="text-center">2023 Successful People</div>
         <div class="text-center">Made by Zhuang jun Kai</div>
     </footer>
+
+    <script>
+        let zk = document.querySelectorAll('.zk');
+        for(z of zk){
+            z.onclick = e => {
+                let more = e.target.dataset.target1;
+                console.log(more);
+                document.querySelector(more).classList.remove('active');
+            }
+        }
+    </script>
 
 </body>
 </html>
