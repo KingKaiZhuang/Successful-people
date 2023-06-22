@@ -209,6 +209,13 @@ nav a {
 #about .people3:hover {
     transform:scale(1.2,1.2);
 }
+footer {
+    background-color: #505050;
+    color: var(--white);
+    width: 100%;
+    padding-block: 20px;
+    letter-spacing: 2px;
+}
 @media (min-width:1200px) {
     .logo {
         width: 300px;
@@ -227,10 +234,9 @@ nav a {
         padding-top: 0px;
     }
     #members {
-        width: 800px;
-        padding: 30px;
+        width: 700px;
         border-radius: 35px;
-        padding-block: 80px;
+        padding-block: 40px;
         transform: translate(-50%,-65%);
     }
     #members h2 {
@@ -255,8 +261,6 @@ nav a {
         top: 50%;
         left: 50%;
         transform: translate(-50%,-80%);
-        animation: run;
-        transition: .3;
     }
     .boss-content {
         width: 400px;

@@ -1,14 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap');
+:root {
+    --blue: #67a5f7;
+    --blue-light: #92c5ff;
+    --red: #ff3b3b;
+    --red-light: #ff9c9c;
+    --yellow: #f5ff3b;
+    --yellow-light: #fbffac;
+    --green:#8fff2d;
+    --green-light:#9aff8a;
+    --dark:#000000;
+    --gray:#dadada;
+    --white:#fff;
+    --transparent:rgba(193, 193, 193, 0.151);
+}
+html {
+    scroll-behavior: smooth;
+}
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family:'poppins', 'Ping Fang TC','微軟正黑體','sans-serif';
 }
-body {
-        font-family:'poppins', 'Ping Fang TC','微軟正黑體','sans-serif';
-}
-html {
-    scroll-behavior: smooth;
+img {
+    width: 100%;
+    vertical-align:top;
 }
 .btn {
     display: inline-block;
@@ -16,27 +32,37 @@ html {
     color: #222;
     padding: 8px 25px;
     border-radius: 8px;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    transition: .3s;
+    border: 0;
+    cursor: pointer;
+    font-size: 16px;
+}
+.btn-yellow {
+    --btn-bg: var(--yellow);
+}
+.btn-yellow:hover {
+    --btn-bg: var(--yellow-light);
 }
 .btn-blue {
-    background-color: #0b74fd;
-    color: #000;
-    transition: .3s;
+    --btn-bg: var(--blue);
+    --btn-text: var(--dark);
 }
 .btn-blue:hover {
-    background-color: #88bcff;
+    --btn-bg: var(--blue-light);
 }
 .btn-dark {
-    background-color: #222;
-    color: #fff;
+    --btn-bg: var(--dark);
+    --btn-text: var(--white);
 }
 .btn-light {
-    background-color: #eee;
-    color: #222;
-    transition: .3s;
+    --btn-bg: var(--gray);
+    --btn-text: var(--dark);
 }
 .btn-light:hover {
-    background-color: #222;
-    color: #eee;
+    --btn-bg: var(--dark);
+    --btn-text: var(--gray);
 }
 
 /* text-align */
@@ -49,3 +75,14 @@ html {
 .text-right {
     text-align: right;
 }
+
+.justify-content-start {justify-content: flex-start;}
+.justify-content-end {justify-content: flex-end;}
+.justify-content-center {justify-content: center;}
+.justify-content-between {justify-content: space-between;}
+.justify-content-around {justify-content: space-around;}
+.justify-content-evenly {justify-content: space-evenly;}
+
+.align-items-start {align-items: flex-start;}
+.align-items-end {align-items: flex-end;}
+.align-items-center {align-items: center;}
