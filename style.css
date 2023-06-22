@@ -45,7 +45,7 @@ nav a {
 .menu-right {
     margin-left: auto;
 }
-.pic {
+.pic1 {
     width: 100%;
     padding-bottom: 66%;
     background-repeat: no-repeat;
@@ -62,16 +62,17 @@ nav a {
 }
 #members {
     /* padding-top: 47px; */
-    width: 225px;
+    width: 300px;
     padding-block: 20px;
-    border-radius: 10px;
-    background-color: #ffffffb4;
+    border-radius: 15px;
+    background-color: #ffffff93;
+    backdrop-filter: blur(1px);
     text-align: center;
 
     position: absolute;
-    top: 55%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-40%);
     transition: .3s;
 }
 #members a {
@@ -79,10 +80,21 @@ nav a {
     color: #000000;
 }
 #members h2 {
-    font-size: 1rem;
+    font-size: 1.5rem;
 }
 #members p {
-    font-size: 1rem;
+    font-size: 1.2rem;
+}
+.pic2 {
+    width: 100%;
+    padding-bottom: 70%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
 .back2 {
     background-image: url('./images/home2.jpg');
@@ -92,11 +104,30 @@ nav a {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-115%,-50%);
+}
+.boss-content {
+    width: 175px;
+    height: 175px;
+    padding: 15px;
+    border: 4px solid #a5a5a5;
+    border-radius: 35px;
+    background-color: aliceblue;
+    position: absolute;
+    top: 20%;
+    right: 5%;
+}
+.content-text h2 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+.content-text p {
+    font-size: 0.8rem;
+    text-align: center;
 }
 .pic-out {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     background-color: rgb(144, 144, 144);
     position: relative;
     border-radius: 50%;
@@ -178,55 +209,37 @@ nav a {
     transform:scale(1.2,1.2);
 }
 @media (min-width:1200px) {
-    nav {
-        display: flex;
-        width: 100%;
-        padding-block: 6px;
-        background-color: rgba(255, 255, 255, 0.375);
-        backdrop-filter: blur(8px);
-        padding-inline: 15px;
-        position: fixed;
-        z-index: 100;
-    }
-    nav a {
-        text-decoration: none;
-        color: black;
-    }
     .logo {
-        display: inline-block;
-        padding: 5px;
         width: 300px;
     }
     .logo a {
         font-size: 20px;
-        font-weight: bold;
-        letter-spacing: 3px;
     }    
     .menu a {
-        display: inline-block;
         font-size: 18px;
         font-weight: bold;
-        margin-inline: 25px;
-        padding: 10px 15px;
-        transition: .3s;
-    }
-    .menu a:hover {
-        background-color: rgba(255, 255, 255, .5);
-        border-radius: 10px;
     }
     .menu-group {
         display: flex;
+    }
+    .back1 {
+        padding-top: 0px;
+    }
+    #members {
+        width: 800px;
+        padding: 30px;
+        padding-block: 80px;
+        transform: translate(-50%,-70%);
+    }
+    #members h2 {
+        font-size: 5rem;
+    }
+    #members p {
+        font-size: 2.5rem;
+    }
+    .pic2 {
         width: 100%;
-    }
-    .menu-left {
-        margin-left: auto;
-    }
-    .menu-right {
-        margin-left: auto;
-    }
-    .pic {
-        width: 100%;
-        padding-bottom: 66%;
+        padding-bottom: 70%;
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center;
@@ -235,43 +248,29 @@ nav a {
         justify-content: center;
         position: relative;
     }
-    .back1 {
-        padding-top: 0px;
-        background-image: url('./images/home.jpg');
-    }
-    #members {
-        width: 600px;
-        padding: 30px;
-        padding-block: 50px;
-        border-radius: 10px;
-        background-color: #fff;
-        text-align: center;
-    
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-55%,-70%);
-    }
-    #members a {
-        text-decoration: none;
-        color: black;
-    }
-    #members h2 {
-        font-size: 4rem;
-    }
-    #members p {
-        font-size: 1.4rem;
-    }
-    .back2 {
-        background-image: url('./images/home2.jpg');
-        position: relative;
-    }
     #boss {
         transition: .3s;
-        position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%,-80%);
+    }
+    .boss-content {
+        width: 400px;
+        height: 250px;
+        padding: 30px;
+        border-radius: 100px;
+        background-color: aliceblue;
+        position: absolute;
+        top: 15%;
+        right: 5%;
+    }
+    .content-text h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .content-text p {
+        font-size: 1.2rem;
+        text-align: center;
     }
     .pic-out {
         width: 350px;
