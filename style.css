@@ -265,6 +265,54 @@ nav a {
 #about .people3:hover {
     transform:scale(1.2,1.2);
 }
+.slider {
+    width: 420px;
+    margin-inline: auto;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 350px;
+}
+.slider-item {
+    position: absolute;
+    opacity: 0;
+    transition: 3s;
+}
+.slider-item.active {
+    opacity: 1;
+}
+img {
+    vertical-align:top;
+}
+.slider-caption {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(30, 30, 30, 0.697);
+    color: #fff;
+    text-align: center;
+    padding-block: 15px;
+}
+.slider-nav {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.slider-nav a {
+    color: #fff ;
+    font-size: 50px;
+    padding-inline: 20px;
+    opacity: 0;
+    transition: .3s;
+}
+.slider-nav a:hover {
+    color: #fff ;
+    font-size: 50px;
+    padding-inline: 20px;
+    opacity: 1;
+}
 footer {
     background-color: #505050;
     color: var(--white);
@@ -419,6 +467,54 @@ footer {
     }
     #about .people3:hover {
         transform:scale(1.2,1.2);
+    }
+    .slider {
+        width: 1200px;
+        margin-inline: auto;
+        position: relative;
+        padding-top: 200px;
+        padding-bottom: 800px;
+    }
+    .slider-item {
+        position: absolute;
+        opacity: 0;
+        transition: 3s;
+    }
+    .slider-item.active {
+        opacity: 1;
+    }
+    img {
+        vertical-align:top;
+    }
+    .slider-caption {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        background-color: rgba(30, 30, 30, 0.697);
+        color: #fff;
+        text-align: center;
+        padding-block: 15px;
+    }
+    .slider-nav {
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .slider-nav a {
+        color: #fff ;
+        font-size: 50px;
+        padding-inline: 20px;
+        opacity: 0;
+        transition: .3s;
+    }
+    .slider-nav a:hover {
+        color: #fff ;
+        font-size: 50px;
+        padding-inline: 20px;
+        opacity: 1;
     }
 }
 

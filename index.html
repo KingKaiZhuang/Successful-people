@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Successful People</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./images/as2va-8k5n2-001.ico">
     <link rel="stylesheet" href="./global.css">
     <link rel="stylesheet" href="./style.css">
@@ -26,6 +27,7 @@
             </div>
         </div>
     </nav>
+
     <section id="1">
         <div class="pic1 back1">
             <div id="members">
@@ -94,93 +96,41 @@
             </div>
         </div>
     </section>
-    
-    <style>
-        .slider {
-            width: 1200px;
-            margin-inline: auto;
-            position: relative;
-        }
-        .slider-item {
-            position: absolute;
-            opacity: 0;
-            z-index: -1;
-            transition: 3s;
-        }
-        .slider-item.active {
-            opacity: 1;
-        }
-        img {
-            vertical-align:top;
-        }
-        .slider-caption {
-            position: absolute;
-            width: 100%;
-            bottom: 0;
-            background-color: rgba(30, 30, 30, 0.697);
-            color: #fff;
-            text-align: center;
-            padding-block: 15px;
-        }
-        .slider-nav {
-            width: 100%;
-            position: absolute;
 
-            display: flex;
-            justify-content: space-between;
-            top: 300px;
-            transform: translateY(-50%);
-        }
-        .slider-nav a {
-            color: #fff ;
-            font-size: 50px;
-            padding-inline: 20px;
-            opacity: 0;
-            transition: .3s;
-        }
-        .slider-nav a:hover {
-            color: #fff ;
-            font-size: 50px;
-            padding-inline: 20px;
-            opacity: 1;
-        }
-    </style>
-    <section>
-        <div class="slider">
-            <div class="slider-item active">
-                <img src="https://picsum.photos/1200/600?random=1" alt="">
-                <div class="slider-caption">
-                    <h4>Photo 1</h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
+    <div class="slider">
+        <div class="slider-item active">
+            <img src="https://picsum.photos/1200/600?random=1" alt="">
+            <div class="slider-caption">
+                <h4>Photo 1</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
-            <div class="slider-item">
-                <img src="https://picsum.photos/1200/600?random=2" alt="">
-                <div class="slider-caption">
-                    <h4>Photo 2</h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/1200/600?random=2" alt="">
+            <div class="slider-caption">
+                <h4>Photo 2</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
-            <div class="slider-item">
-                <img src="https://picsum.photos/1200/600?random=3" alt="">
-                <div class="slider-caption">
-                    <h4>Photo 3</h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/1200/600?random=3" alt="">
+            <div class="slider-caption">
+                <h4>Photo 3</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
-            <div class="slider-item">
-                <img src="https://picsum.photos/1200/600?random=4" alt="">
-                <div class="slider-caption">
-                    <h4>Photo 4</h4>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                </div>
+        </div>
+        <div class="slider-item">
+            <img src="https://picsum.photos/1200/600?random=4" alt="">
+            <div class="slider-caption">
+                <h4>Photo 4</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
             </div>
-            <div class="slider-nav">
-                <a href="#" class="slider-prev"><i class="fa-solid fa-chevron-left"></i></a>
-                <a href="#" class="slider-next"><i class="fa-solid fa-chevron-right"></i></a>
-            </div>
-        </div>        
-    </section>
+        </div>
+        <div class="slider-nav">
+            <a href="#slider" class="slider-prev"><i class="fa-solid fa-chevron-left"></i></a>
+            <a href="#slider" class="slider-next"><i class="fa-solid fa-chevron-right"></i></a>
+        </div>
+    </div>        
     <script>
         let imgs = document.querySelectorAll('.slider-item');
         let total = imgs.length;
@@ -220,6 +170,7 @@
     </footer>
 
     <script>
+        /* More javascript*/
         let collapseBtns = document.querySelectorAll('.collapse-btn');
         for(collapseBtn of collapseBtns){
             collapseBtn.onclick = e => {
@@ -232,7 +183,9 @@
                     panel.style.height = panel.scrollHeight + 'px';
                 }
             }
-        }        
+        }  
+        
+        
     </script>
 
 </body>
