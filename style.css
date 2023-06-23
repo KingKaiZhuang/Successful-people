@@ -158,6 +158,8 @@ nav a {
     clip-path: polygon(0 0,100% 0,100% calc(100% - 10vw),0 100%);
     opacity: 0;
     animation: fadeIn 1s .9s forwards;
+    position: relative;
+    z-index: 20;
 }
 #about h2 {
     font-size: 3rem;
@@ -265,6 +267,11 @@ nav a {
 #about .people3:hover {
     transform:scale(1.2,1.2);
 }
+#News {
+    background-color: #ffe9c4;
+    position: relative;
+    margin-top: -10vw;
+}
 .slider {
     width: 420px;
     margin-inline: auto;
@@ -304,14 +311,12 @@ img {
     color: #fff ;
     font-size: 50px;
     padding-inline: 20px;
-    opacity: 0;
     transition: .3s;
 }
 .slider-nav a:hover {
     color: #fff ;
     font-size: 50px;
     padding-inline: 20px;
-    opacity: 1;
 }
 footer {
     background-color: #505050;
