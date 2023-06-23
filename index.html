@@ -95,6 +95,125 @@
         </div>
     </section>
     
+    <style>
+        .slider {
+            width: 1200px;
+            margin-inline: auto;
+            position: relative;
+        }
+        .slider-item {
+            position: absolute;
+            opacity: 0;
+            z-index: -1;
+            transition: 3s;
+        }
+        .slider-item.active {
+            opacity: 1;
+        }
+        img {
+            vertical-align:top;
+        }
+        .slider-caption {
+            position: absolute;
+            width: 100%;
+            bottom: 0;
+            background-color: rgba(30, 30, 30, 0.697);
+            color: #fff;
+            text-align: center;
+            padding-block: 15px;
+        }
+        .slider-nav {
+            width: 100%;
+            position: absolute;
+
+            display: flex;
+            justify-content: space-between;
+            top: 300px;
+            transform: translateY(-50%);
+        }
+        .slider-nav a {
+            color: #fff ;
+            font-size: 50px;
+            padding-inline: 20px;
+            opacity: 0;
+            transition: .3s;
+        }
+        .slider-nav a:hover {
+            color: #fff ;
+            font-size: 50px;
+            padding-inline: 20px;
+            opacity: 1;
+        }
+    </style>
+    <section>
+        <div class="slider">
+            <div class="slider-item active">
+                <img src="https://picsum.photos/1200/600?random=1" alt="">
+                <div class="slider-caption">
+                    <h4>Photo 1</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/1200/600?random=2" alt="">
+                <div class="slider-caption">
+                    <h4>Photo 2</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/1200/600?random=3" alt="">
+                <div class="slider-caption">
+                    <h4>Photo 3</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/1200/600?random=4" alt="">
+                <div class="slider-caption">
+                    <h4>Photo 4</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="slider-nav">
+                <a href="#" class="slider-prev"><i class="fa-solid fa-chevron-left"></i></a>
+                <a href="#" class="slider-next"><i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>        
+    </section>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let total = imgs.length;
+        let currentIndex = 0;
+        let next = document.querySelector('.slider-next');
+        let prev = document.querySelector('.slider-prev');
+
+        next.onclick = () => {
+            slider();
+        }
+        prev.onclick = () => {
+            slider('prev');
+        }
+
+        function slider(direction){
+            console.log(currentIndex);
+            // if(currentIndex == total - 1){
+            //     currentIndex = 0;
+            // }else{
+            //     currentIndex++;
+            // }
+            if(direction === 'prev'){
+                currentIndex = currentIndex === 0 ? total : currentIndex;
+                currentIndex = (currentIndex - 1) % total;
+            }else{
+                currentIndex = (currentIndex + 1) % total;
+            }
+            document.querySelector('.slider-item.active').classList.remove('active');
+            imgs[currentIndex].classList.add('active');
+        }
+        // setInterval(slider,3000);
+    </script>
+    
     <footer>
         <div class="text-center">2023 Successful People</div>
         <div class="text-center">Made by Zhuang jun Kai</div>
