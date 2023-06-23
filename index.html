@@ -26,7 +26,7 @@
             </div>
         </div>
     </nav>
-    <section id="1">
+    <!-- <section id="1">
         <div class="pic1 back1">
             <div id="members">
                 <h2>Members</h2>
@@ -57,7 +57,7 @@
                 </div>  
             </div>            
         </div>
-    </section>
+    </section> -->
 
     <section id="our" class="member-open active">
         <div id="about">
@@ -69,21 +69,27 @@
                 </div>
                 <div class="col-12 col-lg-4 text-center">
                     <div class="icon"><div class="people1"></div></div>
-                    <h3>廖老大</h3>
-                    <p>希望我每一科都A++!!</p>
-                    <a href="#" class="btn btn-light">More</a>
+                    <h3 id="liw">廖老大</h3>
+                    <a href="#liw" class="collapse-btn btn btn-light">More</a>
+                    <div class="collapse collapse-panel1" id="collapse-1">
+                        <p>希望我每一科都A++!!</p>
+                    </div>
                 </div>
                 <div class="col-12 col-lg-4 text-center">
                     <div class="icon"><div class="people2"></div></div>
-                    <h3>詠哥</h3>
-                    <p>英檢要通過!拜託!</p>
-                    <a href="#" class="btn btn-light">More</a>
+                    <h3 id="yu">詠哥</h3>
+                    <a href="#yu" class="collapse-btn btn btn-light">More</a>
+                    <div class="collapse collapse-panel2" id="collapse-2">
+                        <p>英檢要通過!拜託!</p>
+                    </div>
                 </div>
                 <div class="col-12 col-lg-4 text-center">
                     <div class="icon"><div class="people3"></div></div>
-                    <h3>莊鈞凱</h3>
-                    <p>這個人很懶什麼留言都沒留下</p>
-                    <a href="#" class="btn btn-light zk" data-target1="#our">More</a>
+                    <h3 id="zk">莊鈞凱</h3>
+                    <a href="#zk" class="collapse-btn btn btn-light">More</a>
+                    <div class="collapse collapse-panel3" id="collapse-3">
+                        <p>這個人很懶什麼留言都沒留下!!</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,14 +101,19 @@
     </footer>
 
     <script>
-        let zk = document.querySelectorAll('.zk');
-        for(z of zk){
-            z.onclick = e => {
-                let more = e.target.dataset.target1;
-                console.log(more);
-                document.querySelector(more).classList.remove('active');
+        let collapseBtns = document.querySelectorAll('.collapse-btn');
+        for(collapseBtn of collapseBtns){
+            collapseBtn.onclick = e => {
+                let panel = e.target.nextElementSibling;
+                panel.classList.toggle('active');
+                console.log(panel.style.height);
+                if(panel.style.height){
+                    panel.style.height = null;
+                }else{
+                    panel.style.height = panel.scrollHeight + 'px';
+                }
             }
-        }
+        }        
     </script>
 
 </body>
