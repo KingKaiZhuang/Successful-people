@@ -13,7 +13,8 @@
 </head>
 <body>
     <nav>
-        <div class="logo"><a href="./index.html">Successful People</a></div>
+        <a href="./index.html" class="logo">Successful People</a>
+        <a href="#" class="nav-toggle collapse-btn fa-solid fa-bars fa-2x"></a>
         <div class="menu-group">
             <div class="menu menu-left">
                 <a href="#1">Members</a>
@@ -71,24 +72,24 @@
                 </div>
                 <div class="col-12 col-lg-4 text-center">
                     <div class="icon"><div class="people1"></div></div>
-                    <h3 id="liw">廖苡溱</h3>
-                    <a href="#liw" class="collapse-btn btn btn-light">More</a>
+                    <h3>廖苡溱</h3>
+                    <a href="#" class="collapse-btn btn btn-light">More</a>
                     <div class="collapse collapse-panel1" id="collapse-1">
                         <p>希望我每一科都A++!!</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 text-center">
                     <div class="icon"><div class="people2"></div></div>
-                    <h3 id="yu">許皓詠</h3>
-                    <a href="#yu" class="collapse-btn btn btn-light">More</a>
+                    <h3>許皓詠</h3>
+                    <a href="#" class="collapse-btn btn btn-light">More</a>
                     <div class="collapse collapse-panel2" id="collapse-2">
                         <p>英檢要通過!拜託!</p>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 text-center">
                     <div class="icon"><div class="people3"></div></div>
-                    <h3 id="zk">莊鈞凱</h3>
-                    <a href="#zk" class="collapse-btn btn btn-light">More</a>
+                    <h3>莊鈞凱</h3>
+                    <a href="#" class="collapse-btn btn btn-light">More</a>
                     <div class="collapse collapse-panel3" id="collapse-3">
                         <p>這個人很懶什麼留言都沒留下!!</p>
                     </div>
@@ -100,14 +101,14 @@
     <section id="News">
         <div class="slider">
             <div class="slider-item active">
-                <img src="https://picsum.photos/1200/600?random=1" alt="">
+                <img src="./images/slider/61312.jpg" alt="">
                 <div class="slider-caption">
                     <h4>Photo 1</h4>
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </div>
             <div class="slider-item">
-                <img src="https://picsum.photos/1200/600?random=2" alt="">
+                <img src="./images/slider/78668.jpg" alt="">
                 <div class="slider-caption">
                     <h4>Photo 2</h4>
                     <p>Lorem ipsum dolor sit amet.</p>
@@ -134,62 +135,11 @@
         </div>  
     </section>
       
-    <script>
-        let imgs = document.querySelectorAll('.slider-item');
-        let total = imgs.length;
-        let currentIndex = 0;
-        let next = document.querySelector('.slider-next');
-        let prev = document.querySelector('.slider-prev');
-
-        next.onclick = () => {
-            slider();
-        }
-        prev.onclick = () => {
-            slider('prev');
-        }
-
-        function slider(direction){
-            console.log(currentIndex);
-            // if(currentIndex == total - 1){
-            //     currentIndex = 0;
-            // }else{
-            //     currentIndex++;
-            // }
-            if(direction === 'prev'){
-                currentIndex = currentIndex === 0 ? total : currentIndex;
-                currentIndex = (currentIndex - 1) % total;
-            }else{
-                currentIndex = (currentIndex + 1) % total;
-            }
-            document.querySelector('.slider-item.active').classList.remove('active');
-            imgs[currentIndex].classList.add('active');
-        }
-        // setInterval(slider,3000);
-    </script>
-    
     <footer>
         <div class="text-center">2023 Successful People</div>
         <div class="text-center">Made by Zhuang jun Kai</div>
     </footer>
 
-    <script>
-        /* More javascript*/
-        let collapseBtns = document.querySelectorAll('.collapse-btn');
-        for(collapseBtn of collapseBtns){
-            collapseBtn.onclick = e => {
-                let panel = e.target.nextElementSibling;
-                panel.classList.toggle('active');
-                console.log(panel.style.height);
-                if(panel.style.height){
-                    panel.style.height = null;
-                }else{
-                    panel.style.height = panel.scrollHeight + 'px';
-                }
-            }
-        }  
-        
-        
-    </script>
-
+    <script src="./script.js"></script>
 </body>
 </html>

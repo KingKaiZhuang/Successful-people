@@ -1,5 +1,4 @@
 nav {
-    display: flex;
     width: 100%;
     padding-block: 6px;
     background-color: rgba(255, 255, 255, 0.479);
@@ -10,16 +9,23 @@ nav {
     opacity: 0;
     animation: fadeIn 1s forwards;
 }
+.nav-toggle {
+    display: block;
+    position: absolute;
+    top: 8px;
+    right: 15px;
+    color: rgba(33, 31, 31, 0.77);
+}
 nav a {
     text-decoration: none;
     color: black;
 }
-.logo {
+nav a.logo {
     display: inline-block;
     padding: 5px;
     width: 500px;
 }
-.logo a {
+a.logo{
     font-size: 15px;
     font-weight: bold;
     letter-spacing: 3px;
@@ -37,15 +43,30 @@ nav a {
     border-radius: 10px;
 }
 .menu-group {
-    display: flex;
     width: 100%;
-    display: none;
+    height: 0;
+    overflow: hidden;
+    transition: .3s;
+}
+.menu-group a {
+    display: inline-block;
+    /* margin-inline: 15px; */
+    color: #000000;
+    padding: 12px 15px;
+    border-radius: 10px;
+    transition: .3s;
 }
 .menu-left {
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .menu-right {
     margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .pic1 {
     opacity: 0;
@@ -273,11 +294,11 @@ nav a {
     margin-top: -10vw;
 }
 .slider {
-    width: 420px;
+    width: 350px;
     margin-inline: auto;
     position: relative;
     padding-top: 150px;
-    padding-bottom: 350px;
+    padding-bottom: 450px;
 }
 .slider-item {
     position: absolute;
@@ -287,8 +308,9 @@ nav a {
 .slider-item.active {
     opacity: 1;
 }
-img {
+.slider img {
     vertical-align:top;
+    height: 350px;
 }
 .slider-caption {
     position: absolute;
@@ -326,6 +348,9 @@ footer {
     letter-spacing: 2px;
 }
 @media (min-width:1200px) {
+    .nav-toggle {
+        display: none;
+    }
     .logo {
         width: 300px;
     }
@@ -338,6 +363,8 @@ footer {
     }
     .menu-group {
         display: flex;
+        height: initial;
+        overflow: initial;
     }
     .back1 {
         padding-top: 0px;
@@ -479,6 +506,7 @@ footer {
         position: relative;
         padding-top: 200px;
         padding-bottom: 800px;
+
     }
     .slider-item {
         position: absolute;
@@ -512,14 +540,14 @@ footer {
         color: #fff ;
         font-size: 50px;
         padding-inline: 20px;
-        opacity: 0;
+        /* opacity: 0; */
         transition: .3s;
     }
     .slider-nav a:hover {
         color: #fff ;
         font-size: 50px;
         padding-inline: 20px;
-        opacity: 1;
+        /* opacity: 1; */
     }
 }
 
