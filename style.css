@@ -1,7 +1,10 @@
+body {
+    background-color: #505050;
+}
 nav {
     width: 100%;
     padding-block: 6px;
-    background-color: rgba(255, 255, 255, 0.479);
+    background-color: rgba(255, 255, 255, 0.721);
     backdrop-filter: blur(8px);
     padding-inline: 15px;
     position: fixed;
@@ -312,6 +315,10 @@ a.logo{
     vertical-align:top;
     height: 350px;
 }
+.slider h2 {
+        font-size: 3rem;
+    margin-bottom: 20px;
+}
 .slider-caption {
     position: absolute;
     width: 100%;
@@ -348,13 +355,17 @@ footer {
     letter-spacing: 2px;
 }
 @media (min-width:1200px) {
+    nav {
+        display: flex;
+    }
     .nav-toggle {
         display: none;
     }
     .logo {
         width: 300px;
     }
-    .logo a {
+    nav a.logo  {
+        padding-top: 10px;
         font-size: 20px;
     }    
     .menu a {
@@ -366,6 +377,18 @@ footer {
         height: initial;
         overflow: initial;
     }
+    .menu-left {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .menu-right {
+        margin-left: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }    
     .back1 {
         padding-top: 0px;
     }
