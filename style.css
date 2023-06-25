@@ -21,7 +21,7 @@ nav {
     transition: .3s;
 }
 .fa-solid.active  {
-    transform: rotate(90deg);
+    transform: rotate(-90deg);
 }
 nav a {
     text-decoration: none;
