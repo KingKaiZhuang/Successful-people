@@ -33,7 +33,7 @@ a.logo{
     font-weight: bold;
     letter-spacing: 3px;
 }
-.menu .collapse-btn {
+.menu .nav-btn {
     font-weight:bold;
     display: inline-block;
     font-size: 18px;
@@ -41,16 +41,6 @@ a.logo{
     padding: 10px 15px;
     transition: .3s;
     border-radius: 10px;
-}
-.menu .collapse-btn:hover {
-    background-color: rgb(71, 71, 71);
-    border-radius: 10px;
-    color: var(--white);
-}
-.collapse-btn.active {
-    background-color: rgb(71, 71, 71);
-    border-radius: 10px;
-    color: var(--white);
 }
 .menu-group {
     width: 100%;
@@ -235,26 +225,16 @@ a.logo{
     margin-block-start: 25px;
     border-radius: 50px;
     width: 250px;
-    padding-block: 10px;
-    padding-inline: 15px;
+    padding: 20px;
     position: relative;
 }
-.collapse p {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-
+.collapse .introduce {
+    padding-block-start: 20px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
 }
-.collapse-panel1.active {
-    visibility: visible;
-    opacity: 1;
-}
-.collapse-panel2.active {
-    visibility: visible;
-    opacity: 1;
-}
-.collapse-panel3.active {
+.collapse-panel.active {
     visibility: visible;
     opacity: 1;
 }
@@ -363,6 +343,16 @@ footer {
 @media (min-width:1200px) {
     nav {
         display: flex;
+    }
+    .menu .nav-btn:hover {
+        background-color: rgb(71, 71, 71);
+        border-radius: 10px;
+        color: var(--white);
+    }
+    .nav-btn.active {
+        background-color: rgb(71, 71, 71);
+        border-radius: 10px;
+        color: var(--white);
     }
     .nav-toggle {
         display: none;

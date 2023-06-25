@@ -16,14 +16,14 @@
         <a href="#" class="nav-toggle collapse-btn fa-solid fa-bars fa-2x"></a>
         <div class="menu-group">
             <div class="menu menu-left">
-                <div id="#"><a href="#1" class="collapse-btn">Members</a></div>
-                <div id="#"><a href="#2" class="collapse-btn">Boss</a></div>
-                <div id="#"><a href="#our" class="collapse-btn">About</a></div>
-                <div id="#"><a href="#News" class="collapse-btn">News</a></div>
-                <div id="#"><a href="#STUST" class="collapse-btn">STUST</a></div>
+                <div id="#"><a href="#1" class="nav-btn">Members</a></div>
+                <div id="#"><a href="#2" class="nav-btn">Boss</a></div>
+                <div id="#"><a href="#our" class="nav-btn">About</a></div>
+                <div id="#"><a href="#News" class="nav-btn">News</a></div>
+                <div id="#"><a href="#STUST" class="nav-btn">STUST</a></div>
             </div>
             <div class="menu menu-right">
-                <a href="#" class="collapse-btn">Contact</a>
+                <a href="#" class="nav-btn">Contact</a>
             </div>
         </div>
     </nav>
@@ -73,24 +73,31 @@
                     <div class="icon"><div class="people1"></div></div>
                     <h3>廖苡溱</h3>
                     <a href="#" class="collapse-btn btn btn-light">More</a>
-                    <div class="collapse collapse-panel1" id="collapse-1">
-                        <p>希望我每一科都A++!!</p>
+                    <div class="collapse collapse-panel" id="collapse-1">
+                        <div class="introduce">
+                            <p>希望我每一科都A++!!</p>                        
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 text-center">
                     <div class="icon"><div class="people2"></div></div>
                     <h3>許皓詠</h3>
                     <a href="#" class="collapse-btn btn btn-light">More</a>
-                    <div class="collapse collapse-panel2" id="collapse-2">
-                        <p>英檢要通過!拜託!</p>
+                    <div class="collapse collapse-panel" id="collapse-2">
+                        <div class="introduce">
+                            <p>英檢要通過!拜託!</p>
+                        </div>
                     </div>
                 </div>
                 <div class="col-12 col-lg-4 text-center">
                     <div class="icon"><div class="people3"></div></div>
                     <h3>莊鈞凱</h3>
                     <a href="#" class="collapse-btn btn btn-light">More</a>
-                    <div class="collapse collapse-panel3" id="collapse-3">
-                        <p>這個人很懶什麼留言都沒留下!!</p>
+                    <div class="collapse collapse-panel" id="collapse-3">
+                        <div class="introduce">
+                            <p>這個人很懶什麼留言都沒留下!!</p>
+                            <a href="https://kingkaizhuang.github.io" class="btn btn-light"><i class="fa-regular fa-window-restore"></i>我的網站</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -143,8 +150,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(function(){
-            $('.collapse-btn').click(function(){
-                $('.collapse-btn').removeClass('active');
+            $('.nav-btn').click(function(){
+                $('.nav-btn').removeClass('active');
                 $(this).addClass('active');
             })
         })
