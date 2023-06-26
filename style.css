@@ -439,6 +439,19 @@ footer {
     .company-introduce a:hover {
         color:#2d2d2dc4 ;
     } 
+    .modal-container {
+        max-width: 750px;
+        width: 60%;
+        background-color: rgb(255, 255, 255);
+        position: fixed;
+        padding: 30px;
+        border-radius: 12px;
+        margin: auto;
+    
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
     #boss {
         transform: translate(-50%,-75%);
     }
