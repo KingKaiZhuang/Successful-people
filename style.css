@@ -133,6 +133,16 @@ a.logo{
     -webkit-background-clip: text; /*背景裁剪成文字的前景色*/
     background-clip: text;
 }
+.start-company {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight:600;
+    animation: expand 1.2s ease-in-out;
+}
 #boss {
     position: absolute;
     top: 50%;
@@ -245,7 +255,7 @@ a.logo{
     position: absolute;
 }
 #about .people3:hover {
-    transform:scale(1.2,1.2);
+    transform:scale(1.5,1.5);
 }
 #News {
     background-color: #ffe9c4;
@@ -387,5 +397,13 @@ footer {
     }
     to {
         opacity: 1;
+    }
+}
+@keyframes expand {
+    from {
+        transform: translateX(-500px);
+    }
+    to {
+        transform: translateX(0);
     }
 }
