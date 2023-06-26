@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./global.css">
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./grid.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <nav>
@@ -50,7 +51,25 @@
                 <p style="color: #000000;"><i class="fa-solid fa-user"></i> Boss : Chen (陳芸)</p>
             </div>
             <div class="company-introduce">
-                <a href="#company-introduce"><i class="fa-solid fa-pen-nib"></i> 公司介紹 <i class="fa-solid fa-hand-point-left"></i></a>
+                <a href="#company-introduce" class="modal-btn" data-target="#modal-1"><i class="fa-solid fa-pen-nib"></i> 公司介紹 <i class="fa-solid fa-hand-point-left"></i></a>
+                <div id="modal-1" class="modal">
+                    <div class="modal-overlay model-close"></div>
+                    <div class="modal-container">
+                        <div class="modal-header">
+                            <h3>Modal 1</h3>
+                        </div>
+                        <hr>
+                        <div class="modal-body">
+                            <p>
+                                Lorem ipsum dolor sit amet.
+                            </p>
+                        </div>
+                        <hr>
+                        <div class="modal-footer">
+                            <a href="#" class="model-close">Close</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="boss-content">
                 <div class="content-text">
@@ -68,6 +87,18 @@
                 </div>  
             </div>            
         </div>
+        <script>
+            $(function(){
+                $('.modal-btn').click(function(){
+                    let modal = $(this).data('target');
+                    $(modal).fadeIn();
+                    console.log(modal);
+                })
+                $('.model-close').click(function(){
+                    $('.modal').fadeOut();
+                })
+            })
+        </script>
     </section>
 
     <section id="our">
