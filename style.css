@@ -134,29 +134,47 @@ a.logo{
     -webkit-background-clip: text; /*背景裁剪成文字的前景色*/
     background-clip: text;
 }
-.boss-name {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #ffffff;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight:600;
-    animation: expand 1.2s ease-in-out;    
-}
 .start-company {
     position: absolute;
-    top: 18%;
+    top: 50.2px;
     left: 0;
     background-color: #ffffff;
     padding: 5px 10px;
     border-radius: 5px;
     font-weight:600;
-    animation: expand 1.8s ease-in-out;
+    animation: expand 1.2s ease-in-out;   
 }
+.boss-name {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight:600;
+    animation: expand 1.8s ease-in-out; 
+}
+.company-introduce {
+    position: absolute;
+    top: 130px;
+    left: 0;
+    background-color: #ffffff;
+    padding: 2px 5px;
+    border-radius: 5px;
+    font-weight:600;
+    animation: expand 2.4s ease-in-out;
+}
+.company-introduce a {
+    text-decoration: none;
+    color:#000000 ;
+    transition: .3s;
+} 
+.company-introduce a:hover {
+    color:#2d2d2dc4 ;
+} 
 #boss {
     position: absolute;
-    top: 60%;
+    top: 73%;
     left: 50%;
     transform: translate(-115%,-50%);
 }
@@ -170,8 +188,8 @@ a.logo{
     color: var(--white);
     backdrop-filter: blur(8px);
     position: absolute;
-    top: 33%;
-    right: 5%;
+    top: 40%;
+    right: 4%;
 }
 .content-text h2 {
     font-size: 1.2rem;
@@ -371,23 +389,29 @@ footer {
     #members p {
         font-size: 2.5rem;
     }
-    .boss-name {
-        top: 9%;
-        font-size: 50px;
-        font-weight:600;
-        animation: expand 1.2s ease-in-out;    
-    }
     .start-company {
-        position: absolute;
-        top: 205px;
-        left: 0;
-        background-color: #ffffff;
-        padding: 5px 10px;
-        border-radius: 5px;
-        font-weight:600;
+        top: 65px;
         font-size: 25px;
-        animation: expand 1.8s ease-in-out;
+        animation: expand 1.2s ease-in-out;   
     }
+    .boss-name {
+        top: 120px;
+        font-size: 25px;
+        animation: expand 1.8s ease-in-out; 
+    }
+    .company-introduce {
+        top: 175px;
+        font-size: 25px;
+        animation: expand 2.4s ease-in-out;
+    }
+    .company-introduce a {
+        text-decoration: none;
+        color:#000000 ;
+        transition: .3s;
+    } 
+    .company-introduce a:hover {
+        color:#2d2d2dc4 ;
+    } 
     #boss {
         transform: translate(-50%,-75%);
     }
