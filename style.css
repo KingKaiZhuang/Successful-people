@@ -21,7 +21,7 @@ nav {
     color: rgba(33, 31, 31, 0.77);
     transition: .3s;
 }
-.fa-solid.active  {
+.nav-toggle.active  {
     color: #ffffff;
 }
 nav a {
@@ -135,7 +135,7 @@ a.logo{
 }
 .start-company {
     position: absolute;
-    top: 0;
+    top: 18%;
     left: 0;
     background-color: #ffffff;
     padding: 5px 10px;
@@ -145,7 +145,7 @@ a.logo{
 }
 #boss {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-115%,-50%);
 }
@@ -159,7 +159,7 @@ a.logo{
     color: var(--white);
     backdrop-filter: blur(8px);
     position: absolute;
-    top: 23%;
+    top: 33%;
     right: 5%;
 }
 .content-text h2 {
@@ -368,7 +368,6 @@ footer {
         height: 250px;
         padding: 30px;
         border-radius: 100px;
-        position: absolute;
         top: 15%;
         right: 5%;
     }
