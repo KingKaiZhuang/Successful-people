@@ -1,6 +1,7 @@
 body {
     background-color: #505050;
 }
+/* 導覽列 */
 nav {
     width: 100%;
     padding-block: 6px;
@@ -21,7 +22,7 @@ nav {
     transition: .3s;
 }
 .fa-solid.active  {
-    transform: rotate(-90deg);
+    color: #ffffff;
 }
 nav a {
     text-decoration: none;
@@ -75,7 +76,8 @@ a.logo{
     flex-direction: column;
     align-items: center;
 }
-.pic1 {
+/* 背景圖片樣式 */
+.back-size {
     opacity: 0;
     animation: fadeIn 1s .3s forwards;
     width: 100%;
@@ -88,9 +90,13 @@ a.logo{
     justify-content: center;
     position: relative;
 }
-.back1 {
+.back-1 {
     padding-top: 100px;
     background-image: url('./images/home1-2.jpg');
+}
+.back-2 {
+    background-image: url('./images/home2.jpg');
+    position: relative;
 }
 #members {
     /* padding-top: 47px; */
@@ -109,10 +115,6 @@ a.logo{
     animation: fadeIn 2s 0.6s forwards;
 
 }
-#members a {
-    text-decoration: none;
-    color: #000000;
-}
 #members h2 {
     font-size: 2rem;
     text-align: center;
@@ -130,23 +132,6 @@ a.logo{
     -webkit-background-clip: text; /*背景裁剪成文字的前景色*/
     background-clip: text;
 }
-.pic2 {
-    width: 100%;
-    padding-bottom: 70%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-
-    display: flex;
-    justify-content: center;
-    position: relative;
-    opacity: 0;
-    animation: fadeIn 1s .6s forwards;
-}
-.back2 {
-    background-image: url('./images/home2.jpg');
-    position: relative;
-}
 #boss {
     position: absolute;
     top: 50%;
@@ -157,9 +142,12 @@ a.logo{
     width: 175px;
     height: 175px;
     padding: 10px;
-    border: 4px solid #a5a5a5;
+    margin-top: -10px;
+    border: 3px solid #ffffff;
     border-radius: 35px;
-    background-color: aliceblue;
+    background-color: rgba(8, 8, 8, 0.466);
+    color: var(--white);
+    backdrop-filter: blur(8px);
     position: absolute;
     top: 20%;
     right: 5%;
@@ -176,7 +164,7 @@ a.logo{
     border: 4px solid rgba(255, 255, 255, 0.747); /* 初始邊框設定 */
     width: 150px;
     height: 150px;
-    background-color: rgb(144, 144, 144);
+    background-color: rgb(255, 255, 255);
     position: relative;
     border-radius: 50%;
     overflow: hidden;
@@ -191,8 +179,8 @@ a.logo{
     background-image: url('./images/boss1.jpg');
 }
 #about {
-    padding-block-start: 100px;
-    padding-block-end: calc(100px + 10vw);
+    padding-block-start: 150px;
+    padding-block-end: calc(150px + 10vw);
     background-color: #fff9ea;
     clip-path: polygon(0 0,100% 0,100% calc(100% - 10vw),0 100%);
     opacity: 0;
@@ -208,11 +196,7 @@ a.logo{
     font-size: 2rem;
     margin-block: 20px;
 }
-#about p {
-    margin-bottom: 20px;
-    line-height: 1.7;
-}
-#about .icon {
+#about .head-sticker {
     width: 150px;
     height: 150px;
     margin-inline: auto;
@@ -223,39 +207,6 @@ a.logo{
     border: 5px solid #505050;
     border-radius: 50%;
     overflow: hidden;
-}
-.collapse {
-    width: auto;
-    box-sizing: content-box;
-    margin: auto;
-
-    visibility: hidden;
-    opacity: 0;
-
-    height: 0;
-    overflow: hidden;
-
-    transition: .3s;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: #ffffff;
-    backdrop-filter: blur(8px);
-    margin-block-start: 25px;
-    border-radius: 50px;
-    width: 250px;
-    padding: 20px;
-    position: relative;
-}
-.collapse .introduce {
-    padding-block-start: 20px;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-}
-.collapse-panel.active {
-    visibility: visible;
-    opacity: 1;
 }
 #about .people1 {
     background-image: url('./images/廖老大.jpg');
@@ -301,56 +252,42 @@ a.logo{
     position: relative;
     margin-top: -10vw;
 }
-.slider {
-    width: 350px;
-    margin-inline: auto;
-    position: relative;
-    padding-top: 150px;
-    padding-bottom: 450px;
-}
-.slider-item {
-    position: absolute;
+.collapse {
+    width: auto;
+    box-sizing: content-box;
+    margin: auto;
+
+    visibility: hidden;
     opacity: 0;
-    transition: 3s;
-}
-.slider-item.active {
-    opacity: 1;
-}
-.slider img {
-    vertical-align:top;
-    height: 350px;
-}
-.slider h2 {
-        font-size: 3rem;
-    margin-bottom: 20px;
-}
-.slider-caption {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    background-color: rgba(30, 30, 30, 0.697);
-    color: #fff;
-    text-align: center;
-    padding-block: 15px;
-}
-.slider-nav {
-    width: 100%;
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-    top: 50%;
-    transform: translateY(-50%);
-}
-.slider-nav a {
-    color: #fff ;
-    font-size: 50px;
-    padding-inline: 20px;
+
+    height: 0;
+    overflow: hidden;
+
     transition: .3s;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #ffffff;
+    backdrop-filter: blur(8px);
+    margin-block-start: 25px;
+    border-radius: 50px;
+    width: 250px;
+    padding-block-start: 20px;
+    position: relative;
 }
-.slider-nav a:hover {
-    color: #fff ;
-    font-size: 50px;
-    padding-inline: 20px;
+.collapse .introduce a {
+    margin-top: 15px;
+}
+.collapse .introduce {
+    padding-block-start: 20px;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.5;
+}
+.collapse-panel.active {
+    visibility: visible;
+    opacity: 1;
 }
 footer {
     background-color: #505050;
@@ -399,7 +336,7 @@ footer {
     .menu-right {
         flex-direction: row;
     }    
-    .back1 {
+    .back-size {
         padding-top: 0px;
     }
     #members {
@@ -413,173 +350,37 @@ footer {
     #members p {
         font-size: 2.5rem;
     }
-    .pic2 {
-        width: 100%;
-        padding-bottom: 70%;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-    
-        display: flex;
-        justify-content: center;
-        position: relative;
-    }
     #boss {
-        transition: .3s;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-80%);
+        transform: translate(-50%,-75%);
     }
     .boss-content {
         width: 400px;
         height: 250px;
         padding: 30px;
         border-radius: 100px;
-        background-color: aliceblue;
+        border: 3px solid #ffffff;
+        background-color: rgba(8, 8, 8, 0.466);
+        color: var(--white);
         position: absolute;
         top: 15%;
         right: 5%;
     }
     .content-text h2 {
         font-size: 2rem;
-        text-align: center;
     }
     .content-text p {
         font-size: 1.2rem;
-        text-align: center;
     }
     .pic-out {
         width: 350px;
         height: 350px;
-        background-color: rgb(144, 144, 144);
-        position: relative;
         border-radius: 50%;
-        overflow: hidden;
     }
-    .pic-in {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-    
-        background-repeat: no-repeat;
-        background-size:cover;
+    .pic-in {    
         background-image: url('./images/boss.jpg');
     }
     #about {
-        padding-block-start: 100px;
-        padding-block-end: calc(100px + 10vw);
-        background-color: #fff9ea;
-        clip-path: polygon(0 0,100% 0,100% calc(100% - 10vw),0 100%);
-        transition: .3s;
-    }
-    #about h2 {
-        font-size: 3rem;
-        margin-bottom: 20px;
-    }
-    #about h3 {
-        font-size: 2rem;
-        margin-block: 20px;
-    }
-    #about p {
-        margin-bottom: 20px;
-        line-height: 1.7;
-    }
-    #about .icon {
-        width: 150px;
-        height: 150px;
-        margin-inline: auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        border: 5px solid #505050;
-        border-radius: 50%;
-        overflow: hidden;
-    }
-    #about .people1 {
-        background-image: url('./images/廖老大.jpg');
-        transform:scale(1,1);transition: all .3s ease-in;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-    } 
-    #about .people1:hover {
-        transform:scale(1.2,1.2);
-    }
-    #about .people2 {
-        background-image: url('./images/詠哥.jpg');
-        transform:scale(1,1);transition: all .3s ease-in;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-    }
-    #about .people2:hover {
-        transform:scale(1.2,1.2);
-    }
-    #about .people3 {
-        background-image: url('./images/我.jpg');
-        transform:scale(1,1);transition: all .3s ease-in;
-        background-repeat: no-repeat;
-        background-size: cover;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-    }
-    #about .people3:hover {
-        transform:scale(1.2,1.2);
-    }
-    .slider {
-        width: 1200px;
-        margin-inline: auto;
-        position: relative;
-        padding-top: 200px;
-        padding-bottom: 800px;
-
-    }
-    .slider-item {
-        position: absolute;
-        opacity: 0;
-        transition: 3s;
-    }
-    .slider-item.active {
-        opacity: 1;
-    }
-    img {
-        vertical-align:top;
-    }
-    .slider-caption {
-        position: absolute;
-        width: 100%;
-        bottom: 0;
-        background-color: rgba(30, 30, 30, 0.697);
-        color: #fff;
-        text-align: center;
-        padding-block: 15px;
-    }
-    .slider-nav {
-        width: 100%;
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-    .slider-nav a {
-        color: #fff ;
-        font-size: 50px;
-        padding-inline: 20px;
-        /* opacity: 0; */
-        transition: .3s;
-    }
-    .slider-nav a:hover {
-        color: #fff ;
-        font-size: 50px;
-        padding-inline: 20px;
-        /* opacity: 1; */
+        padding-block-end: calc(150px + 10vw);
     }
 }
 
