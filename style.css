@@ -23,6 +23,7 @@ nav {
 }
 .nav-toggle.active  {
     color: #ffffff;
+    background-color: initial;
 }
 nav a {
     text-decoration: none;
@@ -370,22 +371,41 @@ footer {
     #members p {
         font-size: 2.5rem;
     }
+    .boss-name {
+        top: 9%;
+        font-size: 50px;
+        font-weight:600;
+        animation: expand 1.2s ease-in-out;    
+    }
+    .start-company {
+        position: absolute;
+        top: 205px;
+        left: 0;
+        background-color: #ffffff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-weight:600;
+        font-size: 25px;
+        animation: expand 1.8s ease-in-out;
+    }
     #boss {
         transform: translate(-50%,-75%);
     }
     .boss-content {
         width: 400px;
-        height: 250px;
+        height: 325px;
         padding: 30px;
         border-radius: 100px;
         top: 15%;
         right: 5%;
+        background-color: #ffffff6b;
+        color: #000000;
     }
     .content-text h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .content-text p {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     .pic-out {
         width: 350px;
