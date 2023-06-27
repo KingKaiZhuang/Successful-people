@@ -453,7 +453,9 @@ footer {
         transform: translate(-50%,-50%);
     }
     #boss {
-        transform: translate(-50%,-75%);
+        top: 50%;
+        left: 40%;
+        transform: translate(-50%,-50%);
     }
     .boss-content {
         width: 400px;
