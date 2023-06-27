@@ -408,7 +408,7 @@ footer {
     #members {
         width: 700px;
         padding-block: 40px;
-        transform: translate(-50%,-70%);
+        transform: translate(-50%,-60%);
     }
     #members h2 {
         font-size: 5rem;
