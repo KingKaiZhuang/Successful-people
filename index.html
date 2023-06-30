@@ -20,14 +20,13 @@
         <a href="#" class="nav-toggle collapse-btn fa-solid fa-bars fa-2x"></a>
         <div class="menu-group">
             <div class="menu menu-left">
-                <div id="#"><a href="#1" class="nav-btn">Members</a></div>
-                <div id="#"><a href="#2" class="nav-btn">Boss</a></div>
-                <div id="#"><a href="#our" class="nav-btn">About</a></div>
-                <div id="#"><a href="#news" class="nav-btn">News</a></div>
-                <div id="#"><a href="#STUST" class="nav-btn">STUST</a></div>
+                <a href="#1" class="nav-btn">Members</a>
+                <a href="#2" class="nav-btn">Boss</a>
+                <a href="#our" class="nav-btn">About</a>
+                <a href="#news" class="nav-btn">News</a>
             </div>
             <div class="menu menu-right">
-                <a href="#" class="nav-btn">Contact</a>
+                <a href="#content" class="nav-btn">Contact</a>
             </div>
         </div>
     </nav>
@@ -90,19 +89,20 @@
                 </div>  
             </div>            
         </div>
-        <script>
-            $(function(){
-                $('.modal-btn').click(function(){
-                    let modal = $(this).data('target');
-                    $(modal).fadeIn();
-                    console.log(modal);
-                })
-                $('.model-close').click(function(){
-                    $('.modal').fadeOut();
-                })
-            })
-        </script>
     </section>
+
+    <script>
+        $(function(){
+            $('.modal-btn').click(function(){
+                let modal = $(this).data('target');
+                $(modal).fadeIn();
+                console.log(modal);
+            })
+            $('.model-close').click(function(){
+                $('.modal').fadeOut();
+            })
+        })
+    </script>
 
     <section id="our">
         <div id="about">
@@ -164,6 +164,12 @@
             <img src="./images/slider/S__39518217.jpg" alt="">
         </div>
     </section>
+
+    <section id="content">
+        <div class="back">
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdpmpLthhbP-PQrFC-qs4WvaaegVnSNxfVEAmNVkrokDIEIkQ/viewform?embedded=true" width="640" height="374" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
+        </div>
+    </section>
       
     <footer>
         <div class="text-center">2023 Successful People</div>
@@ -181,6 +187,9 @@
             $('#product').slick({
                 slidesToShow:6,
                 dots:false,
+                autoplay: true,
+                autoplaySpeed: 3000,
+                speed:1000,
                 responsive:[
                     {
                         breakpoint:1200,
