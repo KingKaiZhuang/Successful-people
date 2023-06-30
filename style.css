@@ -9,7 +9,7 @@ nav {
     backdrop-filter: blur(8px);
     padding-inline: 15px;
     position: fixed;
-    z-index: 100;
+    z-index: 1001;
     opacity: 0;
     animation: fadeIn 1s forwards;
 }
