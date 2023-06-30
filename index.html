@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Successful People</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./images/as2va-8k5n2-001.ico">
@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./grid.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <nav>
@@ -20,7 +23,7 @@
                 <div id="#"><a href="#1" class="nav-btn">Members</a></div>
                 <div id="#"><a href="#2" class="nav-btn">Boss</a></div>
                 <div id="#"><a href="#our" class="nav-btn">About</a></div>
-                <div id="#"><a href="#News" class="nav-btn">News</a></div>
+                <div id="#"><a href="#news" class="nav-btn">News</a></div>
                 <div id="#"><a href="#STUST" class="nav-btn">STUST</a></div>
             </div>
             <div class="menu menu-right">
@@ -145,6 +148,29 @@
             </div>
         </div>
     </section>
+
+    <section id="news">
+        <div class="col-12">
+            <div class="text-center">
+                <h2>News</h2>
+            </div>
+        </div>
+        <div id="product">
+            <img src="https://picsum.photos/400/400?random=1" alt="">
+            <img src="https://picsum.photos/400/400?random=2" alt="">
+            <img src="https://picsum.photos/400/400?random=3" alt="">
+            <img src="https://picsum.photos/400/400?random=4" alt="">
+            <img src="https://picsum.photos/400/400?random=5" alt="">
+            <img src="https://picsum.photos/400/400?random=6" alt="">
+            <img src="https://picsum.photos/400/400?random=7" alt="">
+            <img src="https://picsum.photos/400/400?random=8" alt="">
+            <img src="https://picsum.photos/400/400?random=9" alt="">
+            <img src="https://picsum.photos/400/400?random=10" alt="">
+            <img src="https://picsum.photos/400/400?random=11" alt="">
+            <img src="https://picsum.photos/400/400?random=12" alt="">
+            <img src="https://picsum.photos/400/400?random=13" alt="">
+        </div>
+    </section>
       
     <footer>
         <div class="text-center">2023 Successful People</div>
@@ -152,12 +178,37 @@
     </footer>
 
     <script src="./script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         $(function(){
             $('.nav-btn').click(function(){
                 $('.nav-btn').removeClass('active');
                 $(this).addClass('active');
+            })
+
+            $('#product').slick({
+                slidesToShow:6,
+                dots:true,
+                responsive:[
+                    {
+                        breakpoint:1200,
+                        settings:{
+                            slidesToShow:5
+                        }
+                    },
+                    {
+                        breakpoint:960,
+                        settings:{
+                            slidesToShow:4
+                        }
+                    },
+                    {
+                        breakpoint:600,
+                        settings:{
+                            slidesToShow:2
+                        }
+                    },
+                ]
+
             })
         })
     </script>
