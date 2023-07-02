@@ -378,6 +378,13 @@ a.logo{
     display: flex;
     justify-content: center;
 }
+.gotop {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    color: #000;
+    z-index: 1200;
+}
 footer {
     background-color: #505050;
     color: var(--white);

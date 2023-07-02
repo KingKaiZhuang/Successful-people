@@ -182,6 +182,9 @@
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdpmpLthhbP-PQrFC-qs4WvaaegVnSNxfVEAmNVkrokDIEIkQ/viewform?embedded=true" width="640" height="374" frameborder="0" marginheight="0" marginwidth="0">載入中…</iframe>
         </div>
     </section>
+    <a href="#" class="gotop fa-2x">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
       
     <footer>
         <div class="text-center">2023 Successful People</div>
@@ -226,6 +229,16 @@
         })
     </script>
     <script>
+        $(function(){
+            $(window).scroll(function(){
+                let h = $(window).scrollTop();
+                if(h > 600){
+                    $('.gotop').fadeIn();
+                }else{
+                    $('.gotop').fadeOut();
+                }
+            })
+        })
         new WOW().init();
     </script>
 </body>
