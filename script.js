@@ -63,5 +63,6 @@ window.onresize = e => {
         menu.style.height = 0;
         menu.style.overflow = 'hidden';
     }
+    e.preventDefault();
 }
 
