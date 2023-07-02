@@ -10,10 +10,13 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./grid.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css" integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script></head>
 <body>
     <nav>
         <a href="./index.html" class="logo">Successful People</a></div>
@@ -112,7 +115,7 @@
                         <h2>About</h2>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 text-center">
+                <div class="wow bounceInLeft col-12 col-lg-4 text-center" data-wow-delay="0.9s" data-wow-duration="1.5s" data-wow-ofset="150">
                     <div class="head-sticker"><div class="people1"></div></div>
                     <h3>廖苡溱</h3>
                     <a href="#" class="collapse-btn btn btn-light">More</a>
@@ -123,7 +126,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 text-center">
+                <div class="wow bounceInRight col-12 col-lg-4 text-center" data-wow-delay="0.9s" data-wow-duration="1.5s" data-wow-ofset="150">
                     <div class="head-sticker"><div class="people2"></div></div>
                     <h3>許皓詠</h3>
                     <a href="#" class="collapse-btn btn btn-light">More</a>
@@ -134,7 +137,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-12 col-lg-4 text-center">
+                <div class="wow bounceInLeft col-12 col-lg-4 text-center" data-wow-delay="0.9s" data-wow-duration="1.5s" data-wow-ofset="150">
                     <div class="head-sticker"><div class="people3"></div></div>
                     <h3>莊鈞凱</h3>
                     <a href="#" class="collapse-btn btn btn-light">More</a>
@@ -149,13 +152,22 @@
         </div>
     </section>
 
+    <style>
+        .owl-theme .owl-nav [class*=owl-] {
+            color: #fff8be;
+        }
+        .owl-theme .owl-nav [class*=owl-]:hover {
+            background: initial;
+            color: #FFF;
+        }
+    </style>
     <section id="news">
         <div class="col-12">
             <div class="text-center">
                 <h2>News</h2>
             </div>
         </div>
-        <div id="product">
+        <div id="product" class="owl-carousel owl-theme">
             <img src="./images/slider/S__39518211.jpg" alt="">
             <img src="./images/slider/S__39518213.jpg" alt="">
             <img src="./images/slider/S__39518214.jpg" alt="">
@@ -184,35 +196,37 @@
                 $(this).addClass('active');
             })
             // 圖片輪播
-            $('#product').slick({
-                slidesToShow:6,
-                dots:false,
+            $('#product').owlCarousel({
+                center: true,
                 autoplay: true,
                 autoplaySpeed: 3000,
+                loop: true,
                 speed:1000,
-                responsive:[
-                    {
-                        breakpoint:1200,
-                        settings:{
-                            slidesToShow:5
-                        }
+                nav:true,
+                navText:['<i class="fa-solid fa-circle-chevron-left fa-2x"></i>','<i class="fa-solid fa-circle-chevron-right fa-2x"></i>'],
+                margin: 15,
+                responsive:{
+                    0: {
+                        items:2,
+                        dots:false,
+                        nav:true,
                     },
-                    {
-                        breakpoint:960,
-                        settings:{
-                            slidesToShow:4
-                        }
+                    600: {
+                        items: 4,
+                        dots: true,
+                        nav: true,
                     },
-                    {
-                        breakpoint:600,
-                        settings:{
-                            slidesToShow:2
-                        }
-                    },
-                ]
-
+                    1200: {
+                        items: 6,
+                        dots: true,
+                        nav: true,
+                    }
+                }
             })
         })
+    </script>
+    <script>
+        new WOW().init();
     </script>
 </body>
 </html>
