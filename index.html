@@ -19,11 +19,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script></head>
 <body>
     <nav>
-        <a href="./index.html" class="logo">Successful People</a></div>
+        <a href="index.html" class="logo">Successful People</a></div>
         <a href="#" class="nav-toggle collapse-btn fa-solid fa-bars fa-2x"></a>
         <div class="menu-group">
             <div class="menu menu-left">
-                <a href="#1" class="nav-btn">Members</a>
+                <a href="#1" class="nav-btn active">Members</a>
                 <a href="#2" class="nav-btn">Boss</a>
                 <a href="#our" class="nav-btn">About</a>
                 <a href="#news" class="nav-btn">News</a>
@@ -194,10 +194,11 @@
     <script src="./script.js"></script>
     <script>
         $(function(){
-            $('.nav-btn').click(function(){
-                $('.nav-btn').removeClass('active');
-                $(this).addClass('active');
-            })
+            // 選單點選監測
+            // $('.nav-btn').click(function(){
+            //     $('.nav-btn').removeClass('active');
+            //     $(this).addClass('active');
+            // })
             // 圖片輪播
             $('#product').owlCarousel({
                 center: true,
@@ -237,6 +238,35 @@
                 }else{
                     $('.gotop').fadeOut();
                 }
+                // $('nav').find('a').each(function(){
+                //     let href = $(this).attr('href');
+                //     let distance;
+                //     if(href === '#'){
+                //         distance = 0;
+                //     }else{
+                //         distance = $(href).offset().top;
+                //     }
+                //     if(h >= distance - 200){
+                //         $('nav').find('a.active').removeClass('active');
+                //         $(this).addClass('active');
+                //     }
+                //     console.log(distance); 
+                // })
+                // 選單滾動監測
+                $('nav').find('a').each(function(){
+                    let href = $(this).attr('href');
+                    let distance;
+                    if(href === '#' || href === 'index.html'){
+                        distance = 0
+                    }else{
+                        distance = $(href).offset().top;
+                    }
+                    if(h >= distance -200){
+                        $('nav').find('a.active').removeClass('active');
+                        $(this).addClass('active');
+                    }
+                    console.log(this)
+                })
             })
         })
         new WOW().init();

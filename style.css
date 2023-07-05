@@ -400,14 +400,14 @@ footer {
         display: none;
     }
     .menu .nav-btn:hover {
-        background-color: rgb(71, 71, 71);
+        background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+        color: #2e2e2e;
         border-radius: 10px;
-        color: var(--white);
     }
     .nav-btn.active {
-        background-color: rgb(71, 71, 71);
+        background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%);
+        color: #2e2e2e;
         border-radius: 10px;
-        color: var(--white);
     }
     .logo {
         width: 500px;
