@@ -26,7 +26,6 @@
                 <a href="#1" class="nav-btn active">Members</a>
                 <a href="#2" class="nav-btn">Boss</a>
                 <a href="#our" class="nav-btn">About</a>
-                <a href="#news" class="nav-btn">News</a>
             </div>
             <div class="menu menu-right">
                 <a href="#content" class="nav-btn">Contact</a>
@@ -161,21 +160,6 @@
             color: #FFF;
         }
     </style>
-    <section id="news">
-        <div class="col-12">
-            <div class="text-center">
-                <h2>News</h2>
-            </div>
-        </div>
-        <div id="product" class="owl-carousel owl-theme">
-            <img src="./images/slider/S__39518211.jpg" alt="">
-            <img src="./images/slider/S__39518213.jpg" alt="">
-            <img src="./images/slider/S__39518214.jpg" alt="">
-            <img src="./images/slider/S__39518215.jpg" alt="">
-            <img src="./images/slider/S__39518216.jpg" alt="">
-            <img src="./images/slider/S__39518217.jpg" alt="">
-        </div>
-    </section>
 
     <section id="content">
         <div class="back">
@@ -192,43 +176,7 @@
     </footer>
 
     <script src="./script.js"></script>
-    <script>
-        $(function(){
-            // 選單點選監測
-            // $('.nav-btn').click(function(){
-            //     $('.nav-btn').removeClass('active');
-            //     $(this).addClass('active');
-            // })
-            // 圖片輪播
-            $('#product').owlCarousel({
-                center: true,
-                autoplay: true,
-                autoplaySpeed: 3000,
-                loop: true,
-                speed:1000,
-                nav:true,
-                navText:['<i class="fa-solid fa-circle-chevron-left fa-2x"></i>','<i class="fa-solid fa-circle-chevron-right fa-2x"></i>'],
-                margin: 15,
-                responsive:{
-                    0: {
-                        items:2,
-                        dots:false,
-                        nav:true,
-                    },
-                    600: {
-                        items: 4,
-                        dots: true,
-                        nav: true,
-                    },
-                    1200: {
-                        items: 6,
-                        dots: true,
-                        nav: true,
-                    }
-                }
-            })
-        })
-    </script>
+    
     <script>
         $(function(){
             $(window).scroll(function(){

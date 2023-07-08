@@ -350,15 +350,6 @@ a.logo{
     visibility: visible;
     opacity: 1;
 }
-#news {
-    padding-block-start: 100px;
-    padding-block-end: 300px;
-    background-color: #dad6ff;
-}
-#news h2 {
-    font-size: 3rem;
-    margin-bottom: 100px;
-}
 #product {
     width: 90%;
     max-width: 1200px;
