@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: inherit !important;
+}
 body {
     background-color: #505050;
 }
@@ -5,7 +8,7 @@ body {
 nav {
     width: 100%;
     padding-block: 6px;
-    background-image: linear-gradient(45deg, #a096ff, #ff8968b4 90%); /* 設定漸層角度及顏色 */
+    background-image: linear-gradient(-225deg, #ff6db4 0%, #987cff 48%, #a1e0ff 100%);
     backdrop-filter: blur(8px);
     padding-inline: 15px;
     position: fixed;
@@ -245,74 +248,60 @@ a.logo{
     background-size:cover;
     background-image: url('./images/boss1.jpg');
 }
+/* about */
 #about {
-    padding-block-start: 150px;
-    padding-block-end: calc(150px + 10vw);
-    background-color: #fff9ea;
-    opacity: 0;
-    animation: fadeIn 1s .9s forwards;
-    position: relative;
-    z-index: 20;
-}
-#about h2 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-#about h3 {
-    font-size: 2rem;
-    margin-block: 20px;
-}
-#about .head-sticker {
-    width: 150px;
-    height: 150px;
-    margin-inline: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    border: 5px solid #505050;
-    border-radius: 50%;
-    overflow: hidden;
-}
-#about .people1 {
-    background-image: url('./images/廖老大.jpg');
-    transform:scale(1,1);
-    transition: all .3s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: cover;
+    padding-block-start: 100px;
+    padding-block-end: 200px;
     width: 100%;
     height: 100%;
-    position: absolute;
-} 
-#about .people1:hover {
-    transform:scale(1.3,1.3);
+    margin: auto;
+    background-image: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
 }
-#about .people2 {
-    background-image: url('./images/詠哥.jpg');
-    transform:scale(1,1);
-    transition: all .2s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
+#about img {
+    vertical-align: bottom;
+}
+.item {
     height: 100%;
+    background-color: #fff;
+    border: 3px solid #ffffff;
+    margin: 30px;
+    transform: translateY(0px);
+    transition: .3s;
+    box-shadow: 4px 4px 2px #717171;
+}
+.item:hover {
+    transform: translateY(-50px);
+}
+.item:hover .txt {
+    background-image: linear-gradient(180deg, #f093fb 0%, #f5576c 100%);
+    color: #fff;
+}
+.item .txt:before {
+    content: '';
     position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+    border-top: 50px solid transparent;
+    border-left: 154.4px solid #fff;
+    border-right: 154.4px solid #fff;
+    transform: translateY(-138%);
 }
-#about .people2:hover {
-    transform:scale(1.3,1.3);
+.item:hover .txt:before {
+    border-left: 154.4px solid #f093fb;
+    border-right: 154.4px solid #f093fb;
 }
-#about .people3 {
-    background-image: url('./images/我.jpg');
-    transform:scale(1,1);
-    transition: all .3s ease-in-out;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+.item .txt {
+    padding: 20px;
+    text-align: center;
+    line-height: 35px;
 }
-#about .people3:hover {
-    transform:scale(1.3,1.3);
+.item h2 {
+    font-size: 1.5rem;
 }
+/* ------- */
+
 .collapse {
     width: auto;
     box-sizing: content-box;
@@ -502,8 +491,14 @@ footer {
     .pic-in {    
         background-image: url('./images/boss.jpg');
     }
-    #about {
-        padding-block-end: calc(150px + 10vw);
+    .item .txt:before {
+        border-left: 148px solid #fff;
+        border-right: 148px solid #fff;
+        transform: translateY(-138%);
+    }
+    .item:hover .txt:before {
+        border-left: 148px solid #f093fb;
+        border-right: 148px solid #f093fb;
     }
 }
 
